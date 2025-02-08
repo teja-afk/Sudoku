@@ -1,4 +1,4 @@
-#Sudoku Solver
+Sudoku Solver
 A personal project to create a web-based Sudoku application.
 
 ![Sudoku Solver](https://github.com/teja-afk/Sudoku/blob/main/sudoku-screenshot.png?raw=true)
