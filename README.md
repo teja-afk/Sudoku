@@ -1,7 +1,7 @@
 #Sudoku Solver
 A personal project to create a web-based Sudoku application.
 
-![Sudoku Solver](image.png)
+![Sudoku Solver](https://github.com/teja-afk/Sudoku/blob/main/sudoku-screenshot.png?raw=true)
 
 Features
 Interactive Interface: Solve Sudoku puzzles directly in the browser.
