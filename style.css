@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5FCFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Sudoku Grid */
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 45px; /* Adjusted for better touch input */
+    height: 45px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    box-sizing: border-box;
+    outline: none; /* Removes default input focus border */
+}
+
+/* Thicker Borders for 3x3 Grid Separation */
+.cell:nth-child(3n) {
+    border-right: 3px solid black;
+}
+.row:nth-child(3n) .cell {
+    border-bottom: 3px solid black;
+}
+
+/* Outer Border */
+.cell:first-child {
+    border-left: 3px solid black;
+}
+.row:first-child .cell {
+    border-top: 3px solid black;
+}
+.cell:last-child {
+    border-right: 3px solid black;
+}
+.row:last-child .cell {
+    border-bottom: 3px solid black;
+}
+
+/* Alternating Background for Better Readability */
+.lightBackground {
+    background-color: #E0E0E0; /* Light grey */
+}
+
+.darkBackground {
+    background-color: #FFFFFF; /* White for contrast */
+}
+
+/* Button Styling */
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: nowrap; /* Ensures buttons stay in a single row */
+    /* overflow-x: auto; Allows horizontal scrolling if needed */
+}
+
+/* General Button Styles */
+.buttonContainer button {
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap; /* Prevents buttons from breaking into multiple lines */
+}
+
+/* Button Colors */
+#solveButton {
+    background-color: #28A745; /* Green */
+}
+
+#solveButton:hover {
+    background-color: #218838;
+}
+
+#resetButton {
+    background-color: #DC3545; /* Red */
+}
+
+#resetButton:hover {
+    background-color: #C82333;
+}
+
+#checkButton {
+    background-color: #FFC107; /* Yellow */
+    color: black;
+}
+
+#checkButton:hover {
+    background-color: #E0A800;
+}
+
+#hintButton {
+    background-color: #007BFF; /* Blue */
+}
+
+#hintButton:hover {
+    background-color: #0056b3;
+}
+
+/* Highlighting & Mistakes */
+.incorrect {
+    background-color: #FF4C4C !important;
+    color: white !important;
+    border: 2px solid darkred;
+}
+
+.highlight {
+    background-color: orange !important;
+    border: 2px solid darkorange;
+}
+
+/* Hint Styling */
+.hint {
+    background-color: lightgreen !important;
+    font-weight: bold;
+}
+
+/* Result Messages */
+.result {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.correct {
+    background-color: #28A745;
+    color: white;
+}
+
+.incorrect {
+    background-color: #DC3545;
+    color: white;
+}
